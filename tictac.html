@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic tac toe</title>
+    <link rel="stylesheet" href="vendor/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/tic.css">
+</head>
+
+<body>
+<div class="row d-flex align-items-center flex-column">
+    <h3>Let's go to play</h3>
+    <table class="table-dark">
+        <tr>
+            <td onclick="start(this)" class="cellule" id="1"></td>
+            <td onclick="start(this)" class="cellule" id="2"></td>
+            <td onclick="start(this)" class="cellule" id="3"></td>
+        </tr>
+        <tr>
+            <td id="4" onclick="start(this)" class="cellule"> </td>
+            <td id="5" onclick="start(this)" class="cellule"> </td>
+            <td id="6" onclick="start(this)" class="cellule"> </td>
+        </tr>
+        <tr>
+            <td id="7" onclick="start(this)" class="cellule"> </td>
+            <td id="8" onclick="start(this)" class="cellule"> </td>
+            <td id="9" onclick="start(this)" class="cellule"> </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    function start() {
+
+        let caseGame = document.querySelectorAll('.cellule')
+
+        caseGame.forEach(function (Case) {
+            Case.addEventListener("click", function () {
+                if (this.innerHTML === 'X') {
+                    this.innerHTML = 'O'
+                }
+                else {
+                    this.innerHTML = 'X'
+                }
+            });
+        });
+
+    }
+
+</script>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="vendor/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
